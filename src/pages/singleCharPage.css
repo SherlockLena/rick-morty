@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap');
+
+.singleCharPage {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+.goBack {
+    width: 100%;
+    float: left;
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+}
+.charImg {
+    border: 5px solid #F2F2F7;
+    border-radius: 150px;
+}
+.charInfo {
+    display: flex;
+    justify-content: center;
+}
+.charInfoItemKey {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+.charInfoItemValue {
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    color: #6E798C;
+}
+.charName {
+    font-size: 48px;
+    line-height: 56px;
+    color: #081F32;
+    text-align: center;
+}
+h2 {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #8E8E93;
+}
+h3 {
+    font-family: 'Karla', normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+li {
+    list-style-type: none;
+    border-bottom: 1px rgba(33, 33, 33, 0.08);
+}
+li::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: rgba(33, 33, 33, 0.08);
+    mix-blend-mode: normal;
+}
+p::first-letter {
+    text-transform: uppercase;
+  }
+ul {
+    float: left;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 30%;
+}
