@@ -1,22 +1,24 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import useRickAndMortyService from "../../services/RickAndMortyService";
 import CharCard from "../charCard/CharCard";
 import "./charList.css";
 
-const CharList = () => {
-    const {getAllCharacters} = useRickAndMortyService();
+const CharList = ({inputValue}) => {
+    const {getAllCharacters, error, clearError} = useRickAndMortyService();
     const [charList, setCharList] = useState([]);
 
     useEffect(() => {
-        getAllCharacters().then(data => setCharList(data));
-    }, []);
+        clearError();
+        getAllCharacters(inputValue ? `/?name=${inputValue}`: '')
+        .then(data => setCharList(data));
+    }, [inputValue]);
 
     const renderItems = (arr) => {
         const elements = arr.map((item, i) => {
             return (
-                <Link to={`/${item.id}`}>
-                    <CharCard {...item} key={i}/>
+                <Link to={`/${item.id}`} key={i}>
+                    <CharCard {...item}/>
                 </Link>
             );
         });
@@ -25,8 +27,7 @@ const CharList = () => {
 
     return (
         <div className="charList">
-            {console.log(charList)}
-            {charList && charList.length > 0 ? renderItems(charList) : "Loading..."}
+            {error ? "Characters aren't found" : (charList && charList.length > 0 ? renderItems(charList) : "Loading...")}
         </div>
     );
 }

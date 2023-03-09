@@ -1,7 +1,7 @@
 import { useHttp } from '../hooks/http.hook';
 
 const useRickAndMortyService = () => {
-    const {request, clearError, process, setProcess} = useHttp();
+    const {request, clearError, error} = useHttp();
 
     const _apiBase = 'https://rickandmortyapi.com/api/character';
 
@@ -22,8 +22,8 @@ const useRickAndMortyService = () => {
         return (a, b) => a[field] > b[field] ? 1 : -1; 
     }
 
-    const getAllCharacters = async (page = 1) => {
-        const res = await request(`${_apiBase}/?page=${page}`);
+    const getAllCharacters = async (extra = '') => {
+        const res = await request(`${_apiBase}${extra}`);
         return res.results.sort(byName('name')).map(_transformData);
     }
 
@@ -32,7 +32,7 @@ const useRickAndMortyService = () => {
         return _transformData(res);
     }
 
-    return {getAllCharacters, getCharacter, process, setProcess, clearError};
+    return {getAllCharacters, getCharacter, error, clearError};
 }
 
 export default useRickAndMortyService;
