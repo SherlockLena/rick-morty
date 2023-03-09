@@ -20,3 +20,6 @@ input {
     margin-right: 10px;
     order: -1;
 }
+.filterWrapper {
+    margin-bottom: 30px;
+}

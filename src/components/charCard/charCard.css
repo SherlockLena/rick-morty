@@ -1,0 +1,43 @@
+.charCard {
+    width: 240px;
+    height: 244px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+    border-radius: 4px;
+}
+.charCard img {
+    align-self: stretch;
+    flex-grow: 0;
+    flex: none;
+    object-fit: cover;
+    order: 0;
+    width: 100%;
+    height: 70%;
+}
+.charCaption {
+    order: 1;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+    float: left;
+}
+.cardCharName {
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 500;
+    margin: 0;
+}
+.cardCharSpecie {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
