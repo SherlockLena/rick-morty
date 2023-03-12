@@ -32,7 +32,7 @@
     line-height: 30px;
     color: rgba(0, 0, 0, 0.87);
     font-weight: bold;
-    margin: 0;
+    margin: 0 0 5px;
     text-align: left;
     white-space: nowrap; 
     overflow: hidden;
@@ -40,7 +40,7 @@
 }
 .cardCharSpecie {
     font-weight: 400;
-    font-size: 90%;
+    font-size: 1vw;
     line-height: 21px;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.6);
