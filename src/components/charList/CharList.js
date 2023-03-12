@@ -17,7 +17,7 @@ const CharList = ({inputValue}) => {
     const renderItems = (arr) => {
         const elements = arr.map((item, i) => {
             return (
-                <Link to={`/${item.id}`} key={i}>
+                <Link to={`/rick-morty/${item.id}`} key={i}>
                     <CharCard {...item}/>
                 </Link>
             );
