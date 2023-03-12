@@ -1,6 +1,6 @@
 .charCard {
-    width: 240px;
-    height: 244px;
+    width: 16.6vw;
+    height: 16.5vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -9,6 +9,7 @@
     border-radius: 4px;
 }
 .charCard img {
+    border-radius: 8px 8px 0px 0px;
     align-self: stretch;
     flex-grow: 0;
     flex: none;
@@ -27,17 +28,39 @@
     float: left;
 }
 .cardCharName {
-    font-size: 20px;
+    font-size: 1.2vw;
     line-height: 30px;
     color: rgba(0, 0, 0, 0.87);
-    font-weight: 500;
+    font-weight: bold;
     margin: 0;
+    text-align: left;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .cardCharSpecie {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 90%;
     line-height: 21px;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.6);
     margin: 0;
+}
+@media screen and (max-width: 768px) {
+    .charCard {
+        width: 45.5vw;
+        height: 45.4vw;
+    }
+}
+@media screen and (max-width: 480px) {
+    .charCard {
+        width: 86.6vw;
+        height: 86.5vw;
+    }
+    .cardCharName {
+        font-size: 120%;
+    }
+    .cardCharSpecie {
+        font-size: 90%;
+    }
 }

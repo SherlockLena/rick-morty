@@ -1,7 +1,22 @@
 .charList {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    column-gap: 70px;
-    row-gap: 60px;
+    grid-template-columns: repeat(auto-fill, 23.5%);
+    column-gap: 20px;
+    row-gap: 20px;
     justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .charList {
+        grid-template-columns: repeat(auto-fill, 45.5vw);
+        column-gap: 20px;   
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .charList {
+        grid-template-columns: repeat(auto-fill, 86.6vw);
+        column-gap: 20px;
+    }
 }

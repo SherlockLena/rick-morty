@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CharactersPage from "../../pages/CharactersPage";
 import SingleCharPage from "../../pages/SingleCharPage";
+import "./app.css";
 
 function App() {
     return (

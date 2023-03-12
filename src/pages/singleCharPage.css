@@ -68,3 +68,18 @@ ul {
     padding: 0;
     width: 30%;
 }
+@media screen and (max-width: 480px){
+    .charImg {
+        width: 40.7vw;
+        height: auto;
+    }
+    .charName {
+        font-size: 150%;
+    }
+    h2 {
+        text-align: left;
+    }
+    .charInfo {
+        justify-content: left;
+    }
+}
