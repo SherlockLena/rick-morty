@@ -1,7 +1,7 @@
 import { useHttp } from '../hooks/http.hook';
 
 const useRickAndMortyService = () => {
-    const {request, clearError, error} = useHttp();
+    const {request, clearError, error, loading} = useHttp();
 
     const _apiBase = 'https://rickandmortyapi.com/api/character';
 
@@ -32,7 +32,7 @@ const useRickAndMortyService = () => {
         return _transformData(res);
     }
 
-    return {getAllCharacters, getCharacter, error, clearError};
+    return {getAllCharacters, getCharacter, error, clearError, loading};
 }
 
 export default useRickAndMortyService;

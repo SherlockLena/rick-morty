@@ -8,7 +8,7 @@ import "./charactersPage.css";
 
 const CharactersPage = () => {
 
-    const [inputValue, setInputValue] = useState(localStorage.getItem('searchData'));
+    const [inputValue, setInputValue] = useState(localStorage.getItem('searchData') || '');
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')));
     const [profile, setProfile] = useState(null);
 

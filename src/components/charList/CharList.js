@@ -5,7 +5,7 @@ import CharCard from "../charCard/CharCard";
 import "./charList.css";
 
 const CharList = ({inputValue}) => {
-    const {getAllCharacters, error, clearError} = useRickAndMortyService();
+    const {getAllCharacters, error, clearError, loading} = useRickAndMortyService();
     const [charList, setCharList] = useState([]);
 
     useEffect(() => {
@@ -27,7 +27,7 @@ const CharList = ({inputValue}) => {
 
     return (
         <div className="charList">
-            {error ? "Characters aren't found" : (charList && charList.length > 0 ? renderItems(charList) : "Loading...")}
+            {error ? "Characters aren't found" : (!loading && charList ? renderItems(charList) : "Loading...")}
         </div>
     );
 }
