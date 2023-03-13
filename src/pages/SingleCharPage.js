@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import { Link, useParams} from "react-router-dom";
 import arrowBack from "../resources/img/arrow_back.svg";
 import useRickAndMortyService from "../services/RickAndMortyService";
+import Spinner from "../components/spinner/Spinner";
 import './singleCharPage.css';
 
 const SingleCharPage = () => {
     const {id} = useParams();
-    const {getCharacter} = useRickAndMortyService();
+    const {getCharacter, loading} = useRickAndMortyService();
     const [char, setChar] = useState(null);
 
     useEffect(() => {
@@ -47,7 +48,7 @@ const SingleCharPage = () => {
 
     return (
         <div className="singleCharPage">
-            {char ? renderContent(char) : 'Loading...'}
+            {!loading && char ? renderContent(char) : <Spinner/>}
         </div>
     );
 }

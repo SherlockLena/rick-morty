@@ -27,47 +27,6 @@ input {
     margin-bottom: 30px;
 }
 
-.login {
-    width: auto;
-    height: 36px;
-    float: right;
-    margin-right: 10px;
-    margin-top: 10px;
-    position: relative;
-}
-.loginBtn {
-    padding: 5px 5px;
-    border: 2px solid #F2F2F7;
-    border-radius: 28px;
-    cursor: pointer;
-    background-color: #FFFFFF;
-}
-.profile {
-    width: auto;
-    float: left;
-    display: flex;
-}
-.profile button {
-    border: none;
-    background-color: #FFFFFF;
-    cursor: pointer;
-    color: #0095b6;
-}
-.profile img {
-    height: 50px;
-    float: left;
-    border-radius: 25px;
-}
-.profileData {
-    display: flex;
-    padding: 3px 3px;
-    border: 2px solid #F2F2F7;
-    border-radius: 28px;
-}
-.profileName {
-    margin-left: 5px;
-    margin-right: 5px;
-}
 @media screen and (max-width: 480px) {
     .charsPage {
         width: 86.6%;
