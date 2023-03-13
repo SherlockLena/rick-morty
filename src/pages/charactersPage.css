@@ -64,6 +64,10 @@ input {
     border: 2px solid #F2F2F7;
     border-radius: 28px;
 }
+.profileName {
+    margin-left: 5px;
+    margin-right: 5px;
+}
 @media screen and (max-width: 480px) {
     .charsPage {
         width: 86.6%;

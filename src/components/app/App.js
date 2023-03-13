@@ -5,12 +5,12 @@ import "./app.css";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/rick-morty">
             <div className="App">
                 <main>
                     <Routes>
-                        <Route path="/rick-morty" element={<CharactersPage/>}/>
-                        <Route path="/rick-morty/:id" element={<SingleCharPage/>}/>
+                        <Route path="/" element={<CharactersPage/>}/>
+                        <Route path="/:id" element={<SingleCharPage/>}/>
                     </Routes>
                 </main>
             </div>

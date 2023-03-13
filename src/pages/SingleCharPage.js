@@ -30,7 +30,7 @@ const SingleCharPage = () => {
     const renderContent = ({img, name, ...info}) => {
         return (
             <>
-                <Link to="/rick-morty" className="goBack"><img src={arrowBack} alt="Arrow Back"/><h3>GO BACK</h3></Link>
+                <Link to="/" className="goBack"><img src={arrowBack} alt="Arrow Back"/><h3>GO BACK</h3></Link>
                 <div className="charProfile">
                     <img className="charImg" src={img} alt={name}/>
                     <h1 className="charName">{name}</h1>

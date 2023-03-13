@@ -13,7 +13,7 @@ const CharactersPage = () => {
     const [profile, setProfile] = useState(null);
 
     useEffect(() => {
-        if(inputValue !== " ") {
+        if(inputValue !== " " && inputValue !== null) {
             localStorage.setItem('searchData', inputValue);
         }
     }, [inputValue]);
@@ -54,7 +54,7 @@ const CharactersPage = () => {
                         <div className="profile">
                             <div className="profileData">
                                 <img src={profile.picture} alt="user avatar"/>
-                                <p>{profile.name}</p>
+                                <p className="profileName">{profile.name}</p>
                             </div>
                             <button onClick={logOut}>Log out</button>
                         </div>
@@ -65,7 +65,7 @@ const CharactersPage = () => {
                 <div className="filterWrapper">
                     <form>
                         <div className="search">
-                            <input type="text" placeholder="Filter by name..." value={inputValue} onInput={(e) => setInputValue(e.target.value)}/>
+                            <input type="text" placeholder="Filter by name..." value={inputValue === null ? "" : inputValue} onInput={(e) => setInputValue(e.target.value)}/>
                             <img src={loupe} alt="loupe" className="loupe"/>
                         </div>
                     </form>

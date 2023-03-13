@@ -28,8 +28,8 @@
     float: left;
 }
 .cardCharName {
-    font-size: 1.2vw;
-    line-height: 30px;
+    font-size: 100%;
+    line-height: 150%;
     color: rgba(0, 0, 0, 0.87);
     font-weight: bold;
     margin: 0 0 5px;
@@ -40,16 +40,32 @@
 }
 .cardCharSpecie {
     font-weight: 400;
-    font-size: 1vw;
-    line-height: 21px;
+    font-size: 100%;
+    line-height: 150%;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.6);
     margin: 0;
 }
+@media screen and (max-width: 1200px) {
+    .cardCharName {
+        font-size: 70%;
+        line-height: 100%;
+    }
+    .cardCharSpecie {
+        font-size: 60%;
+    }
+}
 @media screen and (max-width: 768px) {
     .charCard {
-        width: 45.5vw;
-        height: 45.4vw;
+        width: 25.5vw;
+        height: 25.4vw;
+    }
+    .cardCharName {
+        font-size: 70%;
+        line-height: 100%;
+    }
+    .cardCharSpecie {
+        font-size: 60%;
     }
 }
 @media screen and (max-width: 480px) {
